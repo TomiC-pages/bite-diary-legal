@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,7 +29,7 @@
 
 <h1>Privacy policy for Bite Diary</h1>
 
-<p class="updated"><strong>Last updated: 2 May 2026</strong></p>
+<p class="updated"><strong>Last updated: 4 May 2026</strong></p>
 
 <p>This privacy policy explains how Bite Diary ("the App") handles your information. The App is developed and operated by the developer of Bite Diary ("we", "us", or "our"). By installing and using the App you agree to the practices described here.</p>
 
@@ -42,6 +43,7 @@
   <li>Custom foods you create and their nutritional values</li>
   <li>Photographs you take of nutrition labels using the in-app scanner</li>
   <li>Text extracted from nutrition labels by the on-device text recognition</li>
+  <li>Barcode values you have scanned and the nutritional data retrieved for them</li>
   <li>Your daily calorie and macronutrient goals</li>
   <li>Your theme preference and other app settings</li>
 </ul>
@@ -57,7 +59,7 @@
 
 <h2>Where your data is stored</h2>
 
-<p>All data described above is stored locally on your device in an SQLite database and your device's preferences storage. <strong>Nothing is transmitted to us, to any server we operate, or to any third party.</strong> The App does not include account creation, cloud sync, or any backend service.</p>
+<p>All data described above is stored locally on your device in an SQLite database and your device's preferences storage. <strong>The App does not include account creation, cloud sync, or any backend service we operate.</strong> The single exception is the barcode lookup feature described below, which sends only a barcode number to Open Food Facts.</p>
 
 <p>If you uninstall the App, all stored data is deleted along with it. We have no copy.</p>
 
@@ -67,13 +69,23 @@
 
 <p>Photographs you take or select are processed entirely on your device using Google's ML Kit on-device text recognition. The image and the recognized text never leave your device. The image is also not retained after the scan completes; only the parsed nutritional values, which you can edit, are saved as part of the food entry you choose to log.</p>
 
+<h2>Barcode scanning and Open Food Facts</h2>
+
+<p>The App can scan product barcodes and look up their nutritional information from <strong>Open Food Facts</strong> (<a href="https://world.openfoodfacts.org">https://world.openfoodfacts.org</a>), a free, open, crowd-sourced food database operated by the non-profit Open Food Facts association.</p>
+
+<p>When you scan a barcode, the App sends only the barcode number itself to Open Food Facts and receives back the product's name and nutritional values. <strong>The App does not send any personal data, location data, photographs, or device identifiers to Open Food Facts.</strong> A generic User-Agent header identifying the App ("Bite Diary") is included with the request as required by Open Food Facts policy.</p>
+
+<p>Open Food Facts may log incoming requests on their servers as part of standard web-server operation. Open Food Facts has its own privacy policy available at <a href="https://world.openfoodfacts.org/privacy">https://world.openfoodfacts.org/privacy</a>. The App developer has no relationship with Open Food Facts beyond using their public API and is not responsible for their policies.</p>
+
+<p>If you choose to contribute a product back to Open Food Facts using the in-app contribution feature (when available), the nutritional values you provide will be uploaded to Open Food Facts' public database. By using that feature you agree to Open Food Facts' contribution terms. Contribution is always optional and you control whether to contribute each product.</p>
+
 <h2>Permissions the App requests</h2>
 
 <p>The App requests the following Android permissions, each used only for the purpose listed:</p>
 <ul>
-  <li><strong>Camera</strong> — to capture photographs of nutrition labels for on-device text recognition</li>
+  <li><strong>Camera</strong> — to capture photographs of nutrition labels and to scan product barcodes</li>
   <li><strong>Read media images</strong> — to let you pick a previously saved photograph of a nutrition label from your gallery</li>
-  <li><strong>Internet</strong> — required by the Android system for ML Kit to download its on-device text-recognition model the first time you use the scan feature; the model is then cached locally and no further network use occurs</li>
+  <li><strong>Internet</strong> — used for two purposes: (1) for ML Kit to download its on-device text-recognition model the first time you use the label scan feature; (2) to send a barcode number to Open Food Facts and receive nutritional information back when you use the barcode scan feature</li>
 </ul>
 
 <p>The App does not request location, contacts, microphone, calendar, SMS, or any other sensitive permission.</p>
@@ -83,13 +95,15 @@
 <p>The App uses the following third-party software libraries that operate entirely on your device:</p>
 <ul>
   <li><strong>Google ML Kit Text Recognition</strong> — for converting photographs of nutrition labels into text</li>
+  <li><strong>mobile_scanner</strong> — for decoding barcodes from camera images on the device</li>
+  <li><strong>openfoodfacts</strong> — the official Open Food Facts SDK, used to look up products by barcode</li>
   <li><strong>sqflite</strong> — for the local database</li>
   <li><strong>Provider</strong> — for app state management</li>
   <li><strong>Material 3 / Flutter</strong> — for the user interface</li>
   <li><strong>fl_chart, percent_indicator, google_fonts, intl</strong> — for visual elements</li>
 </ul>
 
-<p>None of these libraries transmit your personal data to any external service through the App. The Google ML Kit library will, on first use, download a small text-recognition model from Google's servers; this is a one-time technical download with no association to you as a user.</p>
+<p>Apart from the barcode-lookup network requests to Open Food Facts described above, none of these libraries transmit your personal data to any external service through the App. The Google ML Kit library will, on first use, download a small text-recognition model from Google's servers; this is a one-time technical download with no association to you as a user.</p>
 
 <h2>Children's privacy</h2>
 
@@ -97,7 +111,7 @@
 
 <h2>Health and medical disclaimer</h2>
 
-<p>Bite Diary is a personal calorie and food tracking tool. It is <strong>not</strong> a medical device, and the information it provides — including nutritional values, calorie goals, and macronutrient breakdowns — is <strong>not</strong> medical or nutritional advice. The pre-loaded food database draws on publicly available USDA FoodData Central values and may contain inaccuracies. Nutritional values you enter manually or that are extracted from nutrition labels by the scanner may be incomplete or wrong.</p>
+<p>Bite Diary is a personal calorie and food tracking tool. It is <strong>not</strong> a medical device, and the information it provides — including nutritional values, calorie goals, and macronutrient breakdowns — is <strong>not</strong> medical or nutritional advice. The pre-loaded food database draws on publicly available USDA FoodData Central values and may contain inaccuracies. Nutritional values you enter manually, that are extracted from nutrition labels by the scanner, or that are retrieved from Open Food Facts via barcode lookup may be incomplete or wrong. Open Food Facts data is contributed by volunteers and is not authoritative.</p>
 
 <p>Before making significant changes to your diet, especially if you have a medical condition, are pregnant or nursing, are under 18, or are at risk of an eating disorder, consult a qualified healthcare professional. Do not rely on the App as your sole source of nutritional information.</p>
 
