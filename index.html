@@ -1,43 +1,95 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Privacy Policy — Bite Diary</title>
 <style>
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    line-height: 1.6;
-    max-width: 760px;
-    margin: 40px auto;
-    padding: 0 20px;
-    color: #1a1a1a;
-    background: #fafaf5;
+  :root {
+    --bg: #f5f1e6;
+    --surface: #fffdf7;
+    --ink: #2c3325;
+    --muted: #5d6552;
+    --accent: #0f6e56;
+    --rule: #e3ddcb;
   }
-  h1 { color: #1B5E20; border-bottom: 2px solid #1B5E20; padding-bottom: 8px; }
-  h2 { color: #2E7D32; margin-top: 32px; }
-  ul { padding-left: 24px; }
-  li { margin-bottom: 6px; }
-  hr { border: none; border-top: 1px solid #ccc; margin: 32px 0; }
-  .updated { color: #666; font-size: 0.95em; }
-  .footer-note { color: #666; font-size: 0.9em; font-style: italic; }
-  strong { color: #1B5E20; }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.65;
+    font-size: 17px;
+  }
+  .wrap {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 40px 22px 72px;
+  }
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: 14px;
+    padding: 38px 34px;
+  }
+  h1 {
+    color: var(--accent);
+    font-size: 1.9rem;
+    line-height: 1.2;
+    margin: 0 0 6px;
+  }
+  .updated {
+    color: var(--muted);
+    font-size: 0.95rem;
+    margin: 0 0 28px;
+  }
+  h2 {
+    color: var(--accent);
+    font-size: 1.25rem;
+    margin: 34px 0 10px;
+    padding-top: 18px;
+    border-top: 1px solid var(--rule);
+  }
+  h2:first-of-type { border-top: none; padding-top: 0; }
+  p { margin: 0 0 14px; }
+  ul { margin: 0 0 14px; padding-left: 22px; }
+  li { margin: 0 0 8px; }
+  a { color: var(--accent); word-break: break-word; }
+  strong { color: var(--ink); }
+  hr {
+    border: none;
+    border-top: 1px solid var(--rule);
+    margin: 36px 0 22px;
+  }
+  .footer-note {
+    color: var(--muted);
+    font-size: 0.92rem;
+  }
+  @media (max-width: 540px) {
+    body { font-size: 16px; }
+    .card { padding: 26px 20px; border-radius: 10px; }
+    h1 { font-size: 1.55rem; }
+    h2 { font-size: 1.15rem; }
+  }
 </style>
 </head>
 <body>
-
+<div class="wrap">
+<div class="card">
+ 
 <h1>Privacy policy for Bite Diary</h1>
-
-<p class="updated"><strong>Last updated: 24 May 2026</strong></p>
-
-<p>This privacy policy explains how Bite Diary ("the App") handles your information. The App is developed and operated by the developer of Bite Diary ("we", "us", or "our"). By installing and using the App you agree to the practices described here.</p>
-
+<p class="updated"><strong>Last updated: 19 June 2026</strong></p>
+ 
+<p>This privacy policy explains how Bite Diary (&ldquo;the App&rdquo;) handles your information. The App is developed and operated by the developer of Bite Diary (&ldquo;we&rdquo;, &ldquo;us&rdquo;, or &ldquo;our&rdquo;). By installing and using the App you agree to the practices described here.</p>
+ 
 <p>If you do not agree with this policy, please do not install or use the App.</p>
-
+ 
 <h2>What information the App collects</h2>
-
+ 
 <p>Bite Diary stores the following information <strong>only on your own device</strong>:</p>
+ 
 <ul>
   <li>Daily food entries you log, including food name, serving size, meal type, and date</li>
   <li>Custom foods you create and their nutritional values</li>
@@ -45,110 +97,118 @@
   <li>Your daily calorie and macronutrient goals</li>
   <li>Your theme preference and other app settings</li>
 </ul>
-
+ 
 <p>Bite Diary does <strong>not</strong> collect:</p>
+ 
 <ul>
   <li>Your name, email address, phone number, or other identifying details</li>
   <li>Your location</li>
   <li>Crash reports or telemetry</li>
   <li>Any information about other apps installed on your device</li>
 </ul>
-
-<p><strong>Note on advertising:</strong> The App displays banner advertisements served by Google AdMob. Google may collect advertising identifiers and device information for the purpose of serving and measuring ads. See the "Advertising" section below for details. The App developer does not receive or store any of this data.</p>
-
+ 
+<p><strong>Note on advertising:</strong> The App displays banner advertisements served by Google AdMob. Google may collect advertising identifiers and device information for the purpose of serving and measuring ads. See the &ldquo;Advertising&rdquo; section below for details. The App developer does not receive or store any of this data.</p>
+ 
 <h2>Where your data is stored</h2>
-
-<p>All data described above is stored locally on your device in an SQLite database and your device's preferences storage. <strong>The App does not include account creation, cloud sync, or any backend service we operate.</strong> The exceptions are: (1) the barcode lookup feature, which sends only a barcode number to Open Food Facts; and (2) banner advertisements served by Google AdMob, which involve Google's own data collection as described below.</p>
-
+ 
+<p>All data described above is stored locally on your device in an SQLite database and your device&rsquo;s preferences storage. <strong>The App does not include account creation, cloud sync, or any backend service we operate.</strong> The exceptions are: (1) the barcode lookup feature, which sends only a barcode number to Open Food Facts; and (2) banner advertisements served by Google AdMob, which involve Google&rsquo;s own data collection as described below.</p>
+ 
 <p>If you uninstall the App, all stored data is deleted along with it. We have no copy.</p>
-
+ 
 <h2>Camera use</h2>
-
-<p>The App requests permission to use your device's camera for scanning product barcodes. The camera is activated only when you tap the "Scan barcode" button. No photographs are stored; the camera feed is processed in real time to detect barcodes, and only the decoded barcode number is retained for the product lookup described below.</p>
-
+ 
+<p>The App requests permission to use your device&rsquo;s camera for scanning product barcodes. The camera is activated only when you tap the &ldquo;Scan barcode&rdquo; button. No photographs are stored; the camera feed is processed in real time to detect barcodes, and only the decoded barcode number is retained for the product lookup described below.</p>
+ 
 <h2>Barcode scanning and Open Food Facts</h2>
-
+ 
 <p>The App can scan product barcodes and look up their nutritional information from <strong>Open Food Facts</strong> (<a href="https://world.openfoodfacts.org">https://world.openfoodfacts.org</a>), a free, open, crowd-sourced food database operated by the non-profit Open Food Facts association.</p>
-
-<p>When you scan a barcode, the App sends only the barcode number itself to Open Food Facts and receives back the product's name and nutritional values. <strong>The App does not send any personal data, location data, photographs, or device identifiers to Open Food Facts.</strong> A generic User-Agent header identifying the App ("Bite Diary") is included with the request as required by Open Food Facts policy.</p>
-
+ 
+<p>When you scan a barcode to look up a product, the App sends only the barcode number itself to Open Food Facts and receives back the product&rsquo;s name and nutritional values. <strong>For these lookups, the App does not send any personal data, location data, photographs, or device identifiers to Open Food Facts.</strong> A generic User-Agent header identifying the App (&ldquo;Bite Diary&rdquo;) is included with the request as required by Open Food Facts policy. (The optional contribution and correction features described below send additional information; see that paragraph.)</p>
+ 
 <p>Open Food Facts may log incoming requests on their servers as part of standard web-server operation. Open Food Facts has its own privacy policy available at <a href="https://world.openfoodfacts.org/privacy">https://world.openfoodfacts.org/privacy</a>. The App developer has no relationship with Open Food Facts beyond using their public API and is not responsible for their policies.</p>
-
-<p>If you choose to contribute a product back to Open Food Facts using the in-app contribution feature (when available), the nutritional values you provide will be uploaded to Open Food Facts' public database. By using that feature you agree to Open Food Facts' contribution terms. Contribution is always optional and you control whether to contribute each product.</p>
-
+ 
+<p>If you choose to contribute a new product, or to correct or complete an existing product&rsquo;s data, using the App&rsquo;s optional Open Food Facts features, the product information and nutritional values you provide are uploaded to Open Food Facts&rsquo; public database. To let Open Food Facts moderate contributions and prevent abuse, each upload also includes a random identifier that the App generates on your device. This identifier is not your name, email, device ID, or advertising ID; it is not linked to your identity and is not used to track you. By using these features you agree to Open Food Facts&rsquo; contribution terms. Contributing and correcting are always optional, and you control whether to send each change.</p>
+ 
 <h2>Advertising</h2>
-
+ 
 <p>The App displays banner advertisements on the home screen, served by <strong>Google AdMob</strong> (a Google LLC service). To serve and measure ads, Google may collect and process the following information from your device:</p>
-
+ 
 <ul>
-  <li><strong>Advertising ID</strong> — a resettable identifier assigned by Android for ad personalization. You can reset or opt out of personalized ads in your Android device settings under <strong>Settings → Google → Ads</strong>.</li>
-  <li><strong>Device information</strong> — device model, operating system version, screen size, and similar technical data used to serve appropriately sized ad creatives.</li>
-  <li><strong>IP address</strong> — used by Google to infer approximate geographic region for ad targeting (e.g., country-level). The App developer does not receive your IP address.</li>
-  <li><strong>Ad interaction data</strong> — whether you viewed or tapped an ad, used by Google to measure ad performance.</li>
+  <li><strong>Advertising ID</strong> &mdash; a resettable identifier assigned by Android for ad personalization. You can reset or opt out of personalized ads in your Android device settings under <strong>Settings &rarr; Google &rarr; Ads</strong>.</li>
+  <li><strong>Device information</strong> &mdash; device model, operating system version, screen size, and similar technical data used to serve appropriately sized ad creatives.</li>
+  <li><strong>IP address</strong> &mdash; used by Google to infer approximate geographic region for ad targeting (e.g., country-level). The App developer does not receive your IP address.</li>
+  <li><strong>Ad interaction data</strong> &mdash; whether you viewed or tapped an ad, used by Google to measure ad performance.</li>
 </ul>
-
-<p><strong>The App developer does not receive, store, or have access to any of the above data.</strong> All ad-related data collection is handled directly between the Google AdMob SDK on your device and Google's servers. The App developer receives only aggregate, anonymized reporting (e.g., total ad impressions, total revenue) with no ability to identify individual users.</p>
-
-<p>Google's use of this data is governed by Google's own privacy policy, available at <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a>. Google's advertising-specific policies are at <a href="https://policies.google.com/technologies/ads">https://policies.google.com/technologies/ads</a>.</p>
-
-<p>You can limit personalized advertising by adjusting your Android advertising settings: <strong>Settings → Google → Ads → Opt out of Ads Personalization</strong> (or "Delete advertising ID" on Android 12+). Opting out does not remove ads — it means the ads you see will be less targeted to your interests.</p>
-
+ 
+<p><strong>The App developer does not receive, store, or have access to any of the above data.</strong> All ad-related data collection is handled directly between the Google AdMob SDK on your device and Google&rsquo;s servers. The App developer receives only aggregate, anonymized reporting (e.g., total ad impressions, total revenue) with no ability to identify individual users.</p>
+ 
+<p>Google&rsquo;s use of this data is governed by Google&rsquo;s own privacy policy, available at <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a>. Google&rsquo;s advertising-specific policies are at <a href="https://policies.google.com/technologies/ads">https://policies.google.com/technologies/ads</a>.</p>
+ 
+<p>You can limit personalized advertising by adjusting your Android advertising settings: <strong>Settings &rarr; Google &rarr; Ads &rarr; Opt out of Ads Personalization</strong> (or &ldquo;Delete advertising ID&rdquo; on Android 12+). Opting out does not remove ads &mdash; it means the ads you see will be less targeted to your interests.</p>
+ 
+<p><strong>Your consent (EU, EEA, UK, and Switzerland).</strong> If you are located in the European Union, European Economic Area, United Kingdom, or Switzerland, the App asks for your consent before showing personalised advertisements, using Google&rsquo;s User Messaging Platform. On first launch you can choose to consent, to refuse, or to customise your choices. If you refuse, you will still see ads, but they will be non-personalised. You can change your choice at any time within the App under <strong>Settings &rarr; Privacy options</strong>. Users outside these regions are not shown this consent form, in line with applicable law.</p>
+ 
 <h2>Permissions the App requests</h2>
-
+ 
 <p>The App requests the following Android permissions, each used only for the purpose listed:</p>
+ 
 <ul>
-  <li><strong>Camera</strong> — to scan product barcodes using the device camera</li>
-  <li><strong>Internet</strong> — used for three purposes: (1) to send a barcode number to Open Food Facts and receive nutritional information back when you use the barcode scan feature; (2) to load and display banner advertisements via Google AdMob; (3) to allow mobile_scanner to download its barcode detection model if needed</li>
+  <li><strong>Camera</strong> &mdash; to scan product barcodes using the device camera</li>
+  <li><strong>Internet</strong> &mdash; used for three purposes: (1) to send a barcode number to Open Food Facts and receive nutritional information back when you use the barcode scan feature; (2) to load and display banner advertisements via Google AdMob; (3) to allow mobile_scanner to download its barcode detection model if needed</li>
 </ul>
-
+ 
 <p>The App does not request location, contacts, microphone, calendar, SMS, or any other sensitive permission.</p>
-
+ 
 <h2>Third-party libraries</h2>
-
+ 
 <p>The App uses the following third-party software libraries:</p>
+ 
 <ul>
-  <li><strong>Google AdMob (google_mobile_ads)</strong> — for displaying banner advertisements. Google AdMob collects data as described in the "Advertising" section above.</li>
-  <li><strong>mobile_scanner</strong> — for decoding barcodes from the camera feed on the device</li>
-  <li><strong>openfoodfacts</strong> — the official Open Food Facts SDK, used to look up products by barcode</li>
-  <li><strong>sqflite</strong> — for the local database</li>
-  <li><strong>Provider</strong> — for app state management</li>
-  <li><strong>Material 3 / Flutter</strong> — for the user interface</li>
-  <li><strong>fl_chart, percent_indicator, google_fonts, intl</strong> — for visual elements</li>
+  <li><strong>Google AdMob (google_mobile_ads)</strong> &mdash; for displaying banner advertisements. Google AdMob collects data as described in the &ldquo;Advertising&rdquo; section above.</li>
+  <li><strong>mobile_scanner</strong> &mdash; for decoding barcodes from the camera feed on the device</li>
+  <li><strong>openfoodfacts</strong> &mdash; the official Open Food Facts SDK, used to look up products by barcode</li>
+  <li><strong>sqflite</strong> &mdash; for the local database</li>
+  <li><strong>Provider</strong> &mdash; for app state management</li>
+  <li><strong>Material 3 / Flutter</strong> &mdash; for the user interface</li>
+  <li><strong>fl_chart, percent_indicator, google_fonts, intl</strong> &mdash; for visual elements</li>
 </ul>
-
+ 
 <p>Apart from the barcode-lookup requests to Open Food Facts and the advertising data collection by Google AdMob described above, none of these libraries transmit your personal data to any external service through the App.</p>
-
-<h2>Children's privacy</h2>
-
-<p>The App is not specifically designed for or directed to children under 13. We do not knowingly collect any information from children under 13, because we do not collect information from anyone. If you are a parent or guardian and would like more information about how the App works on a child's device, please contact us using the email below.</p>
-
+ 
+<h2>Children&rsquo;s privacy</h2>
+ 
+<p>The App is not specifically designed for or directed to children under 13. We do not knowingly collect any information from children under 13, because we do not collect information from anyone. If you are a parent or guardian and would like more information about how the App works on a child&rsquo;s device, please contact us using the email below.</p>
+ 
 <h2>Health and medical disclaimer</h2>
-
-<p>Bite Diary is a personal calorie and food tracking tool. It is <strong>not</strong> a medical device, and the information it provides — including nutritional values, calorie goals, and macronutrient breakdowns — is <strong>not</strong> medical or nutritional advice. The pre-loaded food database draws on publicly available USDA FoodData Central values and may contain inaccuracies. Nutritional values for pre-loaded foods are USDA averages and may differ from the specific product you have — values can vary by brand, region, growing conditions, and preparation method. Nutritional values you enter manually or that are retrieved from Open Food Facts via barcode lookup may be incomplete or wrong. Open Food Facts data is contributed by volunteers and is not authoritative.</p>
-
+ 
+<p>Bite Diary is a personal calorie and food tracking tool. It is <strong>not</strong> a medical device, and the information it provides &mdash; including nutritional values, calorie goals, and macronutrient breakdowns &mdash; is <strong>not</strong> medical or nutritional advice. The pre-loaded food database draws on publicly available USDA FoodData Central values and may contain inaccuracies. Nutritional values for pre-loaded foods are USDA averages and may differ from the specific product you have &mdash; values can vary by brand, region, growing conditions, and preparation method. Nutritional values you enter manually or that are retrieved from Open Food Facts via barcode lookup may be incomplete or wrong. Open Food Facts data is contributed by volunteers and is not authoritative.</p>
+ 
 <p>Before making significant changes to your diet, especially if you have a medical condition, are pregnant or nursing, are under 18, or are at risk of an eating disorder, consult a qualified healthcare professional. Do not rely on the App as your sole source of nutritional information.</p>
-
+ 
 <h2>Your choices</h2>
-
+ 
 <p>You can stop the App from accessing the camera at any time by revoking that permission in your Android settings. Doing so will disable barcode scanning but will not delete any data you have already saved.</p>
-
-<p>You can limit personalized advertising by adjusting your device's ad settings as described in the "Advertising" section above.</p>
-
+ 
+<p>You can limit personalized advertising by adjusting your device&rsquo;s ad settings as described in the &ldquo;Advertising&rdquo; section above. If you are in the EU, EEA, UK, or Switzerland, you can also change your advertising consent at any time within the App under <strong>Settings &rarr; Privacy options</strong>.</p>
+ 
 <p>You can delete all data stored by the App by uninstalling it from your device.</p>
-
+ 
 <h2>Changes to this policy</h2>
-
-<p>We may update this privacy policy from time to time. Updates will be posted at the same URL where you found this document, and the "Last updated" date at the top will be revised. If you continue to use the App after a change, you are accepting the updated policy. Material changes will be communicated within the App when reasonably possible.</p>
-
+ 
+<p>We may update this privacy policy from time to time. Updates will be posted at the same URL where you found this document, and the &ldquo;Last updated&rdquo; date at the top will be revised. If you continue to use the App after a change, you are accepting the updated policy. Material changes will be communicated within the App when reasonably possible.</p>
+ 
 <h2>Contact</h2>
-
+ 
 <p>If you have questions about this privacy policy or about the App, contact:</p>
-
+ 
 <p><a href="mailto:tomic.support@gmail.com">tomic.support@gmail.com</a></p>
-
+ 
 <hr>
-
+ 
 <p class="footer-note">Bite Diary is committed to user privacy. Privacy law varies by jurisdiction. This policy reflects the current data practices of the App. If you operate or use the App in a jurisdiction with specific privacy requirements (such as GDPR in the EU, CCPA in California, or UK GDPR), additional disclosures may apply. Please contact us with any questions.</p>
-
+ 
+</div>
+</div>
 </body>
 </html>
+ 
