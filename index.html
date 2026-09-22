@@ -80,7 +80,7 @@
 <div class="card">
  
 <h1>Privacy policy for Bite Diary</h1>
-<p class="updated"><strong>Last updated: 8 July 2026</strong></p>
+<p class="updated"><strong>Last updated: 22 September 2026</strong></p>
  
 <p>This privacy policy explains how Bite Diary (&ldquo;the App&rdquo;) handles your information. The App is developed and operated by the developer of Bite Diary (&ldquo;we&rdquo;, &ldquo;us&rdquo;, or &ldquo;our&rdquo;). By installing and using the App you agree to the practices described here.</p>
  
@@ -93,9 +93,11 @@
 <ul>
   <li>Daily food entries you log, including food name, serving size, meal type, and date</li>
   <li>Custom foods you create and their nutritional values</li>
+  <li>Recipes you build, including their ingredients and calculated nutrition</li>
   <li>Barcode values you have scanned and the nutritional data retrieved for them</li>
+  <li>Your weight history, and your height and goal weight if you enter them</li>
   <li>Your daily calorie and macronutrient goals</li>
-  <li>Your theme preference and other app settings</li>
+  <li>Your meal reminder times, your theme preference, and other app settings</li>
 </ul>
  
 <p>Bite Diary does <strong>not</strong> collect:</p>
@@ -113,11 +115,27 @@
  
 <p>All data described above is stored locally on your device in an SQLite database and your device&rsquo;s preferences storage. <strong>The App does not include account creation, cloud sync, or any backend service we operate.</strong> The exceptions are: (1) the barcode lookup feature, which sends only a barcode number to Open Food Facts; and (2) banner advertisements served by Google AdMob, which involve Google&rsquo;s own data collection as described below.</p>
  
-<p>If you uninstall the App, all stored data is deleted along with it. We have no copy.</p>
+<p>If you uninstall the App, all data stored by the App is deleted along with it. We have no copy. The one exception is a backup file you have chosen to save yourself, which is stored outside the App and is not removed when the App is uninstalled &mdash; see &ldquo;Backing up and restoring your data&rdquo; below.</p>
  
 <h2>Camera use</h2>
  
 <p>The App requests permission to use your device&rsquo;s camera for scanning product barcodes. The camera is activated only when you tap the &ldquo;Scan barcode&rdquo; button. No photographs are stored; the camera feed is processed in real time to detect barcodes, and only the decoded barcode number is retained for the product lookup described below.</p>
+ 
+<h2>Backing up and restoring your data</h2>
+ 
+<p>The App can save a backup of your diary to a file, and restore from a file you have saved. Both are started by you, from <strong>Settings &rarr; Backup</strong>. Nothing about this feature involves any server, any account, or any data being sent to the App developer.</p>
+ 
+<p><strong>What a backup file contains.</strong> Your food entries, the foods in your library (including custom foods and foods retrieved from barcode scans), your recipes and their ingredients, and your weight history. It does <strong>not</strong> contain your height, your goal weight, your calorie goals, your app settings, or your advertising consent choice.</p>
+ 
+<p><strong>Where the file goes.</strong> When you save a backup, Android&rsquo;s own file picker asks you where to put it. The App never chooses a location, never writes to a fixed path, and never scans your device&rsquo;s storage for files. It hands the data to the location you picked and does not keep a copy or a record of where it went.</p>
+ 
+<p><strong>The file is not encrypted, and it is yours.</strong> A backup is a plain, readable data file. Once it is written, it is outside the App&rsquo;s protection and under your control: the App&rsquo;s own security settings &mdash; which keep your diary out of Android&rsquo;s cloud backup and device-transfer features &mdash; do not apply to it. If you store the file in cloud storage, send it to someone, or copy it to another device, the information in it travels with it, including your weight history. Deleting the file is your responsibility; uninstalling the App does not remove it.</p>
+ 
+<p><strong>Restoring.</strong> When you restore, you choose a file and the App checks it before using it. A file that is damaged, incomplete, or not a Bite Diary backup is refused and nothing is changed. Restoring only <strong>adds</strong> data &mdash; it never deletes or overwrites anything already in your diary. While the App reads the file, Android places a temporary copy inside the App&rsquo;s private storage; the App deletes that copy once the restore has finished, and again before the next one.</p>
+ 
+<h2>Meal reminders</h2>
+ 
+<p>The App can show reminder notifications at times you choose, for meals you have not logged. Reminders are scheduled and delivered entirely on your device. No reminder, and no information about what you have or have not logged, is sent anywhere. You can turn reminders off at any time in <strong>Settings</strong>, or revoke the notification permission in your Android settings.</p>
  
 <h2>Barcode scanning and Open Food Facts</h2>
  
@@ -128,6 +146,8 @@
 <p>Open Food Facts may log incoming requests on their servers as part of standard web-server operation. Open Food Facts has its own privacy policy available at <a href="https://world.openfoodfacts.org/privacy">https://world.openfoodfacts.org/privacy</a>. The App developer has no relationship with Open Food Facts beyond using their public API and is not responsible for their policies.</p>
  
 <p>If you choose to contribute a new product, or to correct or complete an existing product&rsquo;s data, using the App&rsquo;s optional Open Food Facts features, the product information and nutritional values you provide are uploaded to Open Food Facts&rsquo; public database. To let Open Food Facts moderate contributions and prevent abuse, each upload also includes a random identifier that the App generates on your device. This identifier is not your name, email, device ID, or advertising ID; it is not linked to your identity and is not used to track you. By using these features you agree to Open Food Facts&rsquo; contribution terms. Contributing and correcting are always optional, and you control whether to send each change.</p>
+ 
+<p>Open Food Facts&rsquo; database is published under the <strong>Open Database License (ODbL)</strong>, an open licence that allows anyone &mdash; including commercial services &mdash; to reuse and redistribute the data. <strong>Contributions become part of that openly licensed database and cannot be withdrawn by you or by the App developer afterwards.</strong> What you contribute is nutritional information from a product label, not information about you.</p>
  
 <h2>Advertising</h2>
  
@@ -155,9 +175,14 @@
 <ul>
   <li><strong>Camera</strong> &mdash; to scan product barcodes using the device camera</li>
   <li><strong>Internet</strong> &mdash; used for three purposes: (1) to send a barcode number to Open Food Facts and receive nutritional information back when you use the barcode scan feature; (2) to load and display banner advertisements via Google AdMob; (3) to allow mobile_scanner to download its barcode detection model if needed</li>
+  <li><strong>Notifications</strong> &mdash; to show meal reminders at the times you choose. Android asks for this permission the first time you turn a reminder on, and you can refuse or revoke it at any time; the rest of the App works normally without it.</li>
+  <li><strong>Run at startup</strong> &mdash; so that reminders you have already scheduled survive a device restart. Nothing runs at startup other than re-scheduling those reminders.</li>
+  <li><strong>Vibrate</strong> &mdash; used by Android to alert you when a reminder notification appears.</li>
 </ul>
  
-<p>The App does not request location, contacts, microphone, calendar, SMS, or any other sensitive permission.</p>
+<p>Some of the libraries listed below declare further technical permissions of their own &mdash; for example network-state and advertising-identifier access used by Google AdMob. These appear in your device&rsquo;s app info alongside the permissions above. None of them reads your food, weight, or personal information.</p>
+ 
+<p>The App does not request location, contacts, microphone, calendar, SMS, or any other permission that reads personal information from your device.</p>
  
 <h2>Third-party libraries</h2>
  
@@ -168,6 +193,11 @@
   <li><strong>mobile_scanner</strong> &mdash; for decoding barcodes from the camera feed on the device</li>
   <li><strong>openfoodfacts</strong> &mdash; the official Open Food Facts SDK, used to look up products by barcode</li>
   <li><strong>sqflite</strong> &mdash; for the local database</li>
+  <li><strong>file_picker</strong> &mdash; to let you choose where a backup file is saved and which file to restore from</li>
+  <li><strong>flutter_local_notifications, flutter_timezone, timezone</strong> &mdash; for scheduling and showing meal reminders on the device</li>
+  <li><strong>permission_handler</strong> &mdash; for asking Android for the notification permission</li>
+  <li><strong>in_app_review</strong> &mdash; to show Google Play&rsquo;s own &ldquo;rate this app&rdquo; card. The App cannot see whether you left a review or what rating you gave.</li>
+  <li><strong>in_app_update</strong> &mdash; to tell you when a newer version is available on Google Play. This reports update availability to the App; the App sends nothing to Google beyond the update check the Play Store already performs on your device.</li>
   <li><strong>Provider</strong> &mdash; for app state management</li>
   <li><strong>Material 3 / Flutter</strong> &mdash; for the user interface</li>
   <li><strong>fl_chart, percent_indicator, google_fonts, intl</strong> &mdash; for visual elements</li>
@@ -189,9 +219,11 @@
  
 <p>You can stop the App from accessing the camera at any time by revoking that permission in your Android settings. Doing so will disable barcode scanning but will not delete any data you have already saved.</p>
  
+<p>You can turn meal reminders off at any time in the App&rsquo;s settings, or revoke the notification permission in your Android settings.</p>
+ 
 <p>You can limit personalized advertising by adjusting your device&rsquo;s ad settings as described in the &ldquo;Advertising&rdquo; section above. If you are in the EU, EEA, UK, or Switzerland, you can also change your advertising consent at any time within the App under <strong>Settings &rarr; Privacy options</strong>.</p>
  
-<p>You can delete all data stored by the App at any time from within the App under <strong>Settings &rarr; Clear all data</strong>, or by uninstalling the App from your device.</p>
+<p>You can delete all data stored by the App at any time from within the App under <strong>Settings &rarr; Clear all data</strong>, or by uninstalling the App from your device. Backup files you have saved yourself are not affected by either, and must be deleted by you wherever you stored them.</p>
  
 <h2>Changes to this policy</h2>
  
@@ -211,4 +243,3 @@
 </div>
 </body>
 </html>
- 
